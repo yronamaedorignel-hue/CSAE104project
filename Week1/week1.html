@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campus Notices</title>
+</head>
+<body>
+
+  <header>
+    <h1>Campus Notices</h1>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#notices">Notices</a></li>
+        <li><a href="#deadlines">Deadlines</a></li>
+        <li><a href="#submit">Post a notice</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="notices">
+      <article class="notice">
+        <h2>Library hours extended</h2>
+        <p>The library stays open until 9 PM during midterm week.</p>
+      </article>
+
+      <article class="notice">
+        <h2>Library hours extended</h2>
+        <p class="meta">
+          <time datetime="2026-10-12">12 October 2026</time> · 
+          <span class="tag">Academic</span>
+        </p>
+        <p>The library stays open until 9 PM during midterm week.</p>
+      </article>
+
+      <article class="notice">
+        <h2>Library hours extended</h2>
+        <p class="meta">
+          <time datetime="2026-10-12">12 October 2026</time> · 
+          <span class="tag">Academic</span>
+        </p>
+        <p>The library stays open until 9 PM during midterm week.</p>
+      </article>
+
+      <article class="notice">
+        <h2>Library hours extended</h2>
+        <p class="meta">
+          <time datetime="2026-10-12">12 October 2026</time> · 
+          <span class="tag">Academic</span>
+        </p>
+        <p>The library stays open until 9 PM during midterm week.</p>
+      </article>
+    </section>
+
+    <section id="deadlines">
+      <h2>Upcoming deadlines</h2>
+      <table>
+        <caption>Deadlines this month</caption>
+        <thead>
+          <tr>
+            <th scope="col">Activity</th>
+            <th scope="col">Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Enrolment ends</td>
+            <td>20 January</td>
+          </tr>
+          <tr>
+            <td>Programming contest registration</td>
+            <td>25 January</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="submit">
+      <h2>Post a notice</h2>
+      <form action="#" method="post">
+        <p>
+          <label for="title">Title</label><br>
+          <input type="text" id="title" name="title" required maxlength="100">
+        </p>
+        <p>
+          <label for="category">Category</label><br>
+          <select id="category" name="category">
+            <option value="academic">Academic</option>
+            <option value="event">Event</option>
+            <option value="general">General</option>
+          </select>
+        </p>
+        <p>
+          <label for="date">Date</label><br>
+          <input type="date" id="date" name="date">
+        </p>
+        <p>
+          <label for="message">Message</label><br>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </p>
+        <p>
+          <label for="email">Your email</label><br>
+          <input type="email" id="email" name="email" required>
+        </p>
+        <button type="submit">Post notice</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>College of Computer Science, DMMMSU-SLUC</p>
+  </footer>
+
+</body>
+</html>
