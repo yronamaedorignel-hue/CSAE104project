@@ -4,15 +4,185 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSAE 104 Projects</title>
+  <style>
+    :root {
+      --bg: #f4f7fa;
+      --surface: #ffffff;
+      --primary: #1d4e89;
+      --primary-hover: #153a66;
+      --accent-soft: #e6effa;
+      --text: #1f2933;
+      --muted: #52606d;
+      --border: #d9e2ec;
+      --radius: 10px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .site-header {
+      background: var(--primary);
+      color: #ffffff;
+      padding: 28px 20px;
+      text-align: center;
+      border-bottom: 4px solid #f3c623;
+    }
+
+    .site-header .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.16);
+      color: #ffffff;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 8px;
+    }
+
+    .site-header h1 {
+      margin: 0 0 6px 0;
+      font-size: 1.8rem;
+    }
+
+    .site-header p {
+      margin: 0;
+      color: #e6effa;
+      font-size: 0.98rem;
+    }
+
+    main {
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 32px 20px 48px;
+      flex: 1;
+    }
+
+    .section-title {
+      margin: 0 0 18px 0;
+      font-size: 1.25rem;
+      color: var(--primary);
+    }
+
+    .submissions {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(15, 23, 42, 0.08);
+    }
+
+    .week-tag {
+      display: inline-block;
+      background: var(--accent-soft);
+      color: var(--primary);
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      margin: 0 0 6px 0;
+      font-size: 1.15rem;
+      color: var(--text);
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .btn-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      background: var(--primary);
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 10px 16px;
+      border-radius: 8px;
+      transition: background 0.2s ease;
+    }
+
+    .btn-link:hover,
+    .btn-link:focus-visible {
+      background: var(--primary-hover);
+    }
+  </style>
 </head>
 <body>
-    <header></header>
-    <main>
-        <h1>Web Programming</h1>
-        <h2>Submission</h2>
-        <a href="./Week1/week1.html">Week 1</a>
-        <a href="./Week2/week2.html">Week 2</a>
-        <a href="./Week3/week3.html">Week 3</a>
-    </main>
+  <header class="site-header">
+    <span class="badge">CSAE 104</span>
+    <h1>Web Programming</h1>
+    <p>Weekly Laboratory Submissions &amp; Activity Index</p>
+  </header>
+
+  <main>
+    <h2 class="section-title">Submissions</h2>
+
+    <div class="submissions">
+      <article class="card">
+        <div>
+          <span class="week-tag">Week 1</span>
+          <h3>Week 1 Activity</h3>
+          <p>Open your Week 1 web programming submission.</p>
+        </div>
+        <a class="btn-link" href="./Week1/week1.html">Open Week 1</a>
+      </article>
+
+      <article class="card">
+        <div>
+          <span class="week-tag">Week 2</span>
+          <h3>Week 2 Activity</h3>
+          <p>Open your Week 2 web programming submission.</p>
+        </div>
+        <a class="btn-link" href="./Week2/week2.html">Open Week 2</a>
+      </article>
+
+      <article class="card">
+        <div>
+          <span class="week-tag">Week 3</span>
+          <h3>Week 3 Activity</h3>
+          <p>Open your Week 3 campus notices board submission.</p>
+        </div>
+        <a class="btn-link" href="./Week3/week3.html">Open Week 3</a>
+      </article>
+    </div>
+  </main>
 </body>
 </html>
