@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aringay National High School</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="brand-left">
+      <img src="logo.png" alt="Aringay National High School logo" class="school-logo">
+      <h1>Aringay National High School</h1>
+    </div>
+
+    <nav class="header-nav" aria-label="Main">
+      <ul>
+        <li><a href="#notices">Notices</a></li>
+        <li><a href="#deadlines">Deadlines</a></li>
+        <li><a href="#submit">Post a notice</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="notices" aria-labelledby="notices-heading">
+      <h2 id="notices-heading">Latest Notices</h2>
+
+      <div class="notices">
+        <article class="notice">
+          <span class="tag">Academic</span>
+          <h3>Library hours extended</h3>
+          <p class="meta">
+            <time datetime="2026-10-12">October 12, 2026</time>
+          </p>
+          <p>The school library stays open until 5 PM during quarterly exam week.</p>
+        </article>
+
+        <article class="notice">
+          <span class="tag">Event</span>
+          <h3>ICT &amp; Robotics club meetup</h3>
+          <p class="meta">
+            <time datetime="2026-10-14">October 14, 2026</time>
+          </p>
+          <p>Hands-on session on basic programming and circuit building after dismissal.</p>
+        </article>
+
+        <article class="notice">
+          <span class="tag">General</span>
+          <h3>Campus gate &amp; dismissal reminder</h3>
+          <p class="meta">
+            <time datetime="2026-10-15">October 15, 2026</time>
+          </p>
+          <p>Students waiting for rides must stay inside the covered court until picked up.</p>
+        </article>
+
+        <article class="notice">
+          <span class="tag">Academic</span>
+          <h3>Science investigatory proposal call</h3>
+          <p class="meta">
+            <time datetime="2026-10-18">October 18, 2026</time>
+          </p>
+          <p>Research groups must submit initial topic outlines to their advisers.</p>
+        </article>
+
+        <article class="notice">
+          <span class="tag">Event</span>
+          <h3>Programming competition</h3>
+          <p class="meta">
+            <time datetime="2026-11-20">November 20, 2026</time>
+          </p>
+          <p>Interested students are invited to register for the campus coding challenge.</p>
+        </article>
+
+        <article class="notice">
+          <span class="tag">General</span>
+          <h3>Campus announcement</h3>
+          <p class="meta">
+            <time datetime="2026-11-25">November 25, 2026</time>
+          </p>
+          <p>Students are reminded to check official advisories regularly for school updates.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="submit" aria-labelledby="submit-heading">
+      <h2 id="submit-heading">Post a notice</h2>
+      <form action="#" method="post">
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" id="title" name="title" required maxlength="100">
+        </div>
+
+        <div class="form-group">
+          <label for="category">Category</label>
+          <select id="category" name="category">
+            <option value="academic">Academic</option>
+            <option value="event">Event</option>
+            <option value="general">General</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="date">Date</label>
+          <input type="date" id="date" name="date">
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Your email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <button type="submit">Post notice</button>
+      </form>
+    </section>
+  </main>
+
+  <aside class="side-panel" aria-label="Sidebar">
+    <section id="deadlines" aria-labelledby="deadlines-heading">
+      <h2 id="deadlines-heading">Upcoming deadlines</h2>
+      <div class="table-wrap">
+        <table>
+          <caption>Deadlines this month</caption>
+          <thead>
+            <tr>
+              <th scope="col">Activity</th>
+              <th scope="col">Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Enrolment ends</td>
+              <td><time datetime="2026-01-20">20 January</time></td>
+            </tr>
+            <tr>
+              <td>Programming contest registration</td>
+              <td><time datetime="2026-01-25">25 January</time></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </aside>
+
+  <footer>
+    <img src="logo.png" alt="Aringay National High School logo" class="footer-logo">
+    <p>Aringay National High School · Aringay, La Union</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,288 @@
+:root {
+  --brand: #16336d;        
+  --brand-soft: #e6ecf8;
+  --logo-yellow: #f3e03b;    
+  --surface: #ffffff;
+  --page: #f4f7fa;
+  --text: #1f2933;
+  --text-muted: #52606d;
+  --border: #d9e2ec;
+  --radius: 8px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  background: var(--page);
+  color: var(--text);
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr;
+}
+
+.site-header {
+  background: var(--brand);
+  color: #ffffff;
+  padding: 16px 32px;
+  border-bottom: 5px solid var(--logo-yellow);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 24px;
+}
+
+.brand-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.school-logo {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 1.35rem;
+  color: #ffffff;
+}
+
+.header-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav a {
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.header-nav a:hover,
+.header-nav a:focus-visible {
+  color: var(--logo-yellow);
+  text-decoration: underline;
+}
+
+
+main,
+.side-panel {
+  width: 100%;
+  padding: 0 16px;
+}
+
+main section {
+  margin-bottom: 32px;
+}
+
+main section:last-child {
+  margin-bottom: 0;
+}
+
+.side-panel section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+
+h2 {
+  color: var(--brand);
+  margin-top: 0;
+}
+
+
+.notices {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+}
+
+.notice {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.tag {
+  background: var(--brand-soft);
+  color: var(--brand);
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.notice h3 {
+  color: var(--brand);
+  margin: 0 0 4px 0;
+}
+
+.meta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0 0 10px 0;
+}
+
+.notice p:last-child {
+  margin: 0;
+}
+
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background: var(--surface);
+}
+
+caption {
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-muted);
+}
+
+th,
+td {
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  text-align: left;
+}
+
+th {
+  background: var(--brand-soft);
+  color: var(--brand);
+}
+
+
+.form-group {
+  margin-bottom: 14px;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font: inherit;
+  background: var(--surface);
+  color: var(--text);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid var(--brand);
+  border-color: var(--brand);
+}
+
+button {
+  background: var(--brand);
+  color: #ffffff;
+  border: 0;
+  border-radius: var(--radius);
+  padding: 10px 20px;
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus-visible {
+  background: #0f2552;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+footer {
+  text-align: center;
+  padding: 16px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-logo {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+@media (min-width: 600px) {
+  .notices {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .notices {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  body {
+    grid-template-columns: minmax(16px, 1fr) minmax(0, 880px) 320px minmax(16px, 1fr);
+    grid-template-areas:
+      "header header header header"
+      ".      main   aside  ."
+      "footer footer footer footer";
+  }
+
+  .site-header {
+    grid-area: header;
+  }
+
+  main {
+    grid-area: main;
+    padding: 0;
+  }
+
+  .side-panel {
+    grid-area: aside;
+    padding: 0;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+}
